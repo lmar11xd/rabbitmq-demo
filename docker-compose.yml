@@ -1,0 +1,16 @@
+services:
+  rabbit: 
+    image: rabbitmq:4.1.0-rc.1-management
+    container_name: rabbitmq
+    ports:
+      - "15672:15672" # RabbitMQ management UI
+      - "5672:5672"   # RabbitMQ AMQP protocol
+    environment:
+      RABBITMQ_DEFAULT_USER: lmar
+      RABBITMQ_DEFAULT_PASS: rabbit12345
+    networks:
+      - rabbitmq-net
+
+networks:
+  rabbitmq-net:
+    driver: bridge # Custom network for Docker

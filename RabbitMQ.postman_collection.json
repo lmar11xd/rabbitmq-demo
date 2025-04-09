@@ -1,0 +1,69 @@
+{
+	"info": {
+		"_postman_id": "2eae315f-8ff6-4099-a1bc-c596bf7a7d23",
+		"name": "RabbitMQ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3512991",
+		"_collection_link": "https://martian-escape-904757.postman.co/workspace/My-Workspace~e4583a86-edf4-4996-8eef-942dbf0dda24/collection/3512991-2eae315f-8ff6-4099-a1bc-c596bf7a7d23?action=share&source=collection_link&creator=3512991"
+	},
+	"item": [
+		{
+			"name": "Color Publisher",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"black\",\r\n    \"hex\": \"#000000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7070/publish/color",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7070",
+					"path": [
+						"publish",
+						"color"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Shape Publisher",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"rectangle\",\r\n    \"numberOfSides\": 4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7070/publish/shape",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7070",
+					"path": [
+						"publish",
+						"shape"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
